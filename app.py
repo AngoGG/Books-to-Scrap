@@ -35,8 +35,7 @@ class App:
                 full_books_data.append(self.scraper.get_book_data(book, category))
             self.csv_writter.write(full_books_data)
             for book_data in full_books_data:
-                # self.scraper.download_file(book_data['image_url'])
-                ...
+                self.scraper.download_file(book_data['image_url'])
 
 
 def main():
